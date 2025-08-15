@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+    }
+    a {
+      color: #4fc3f7;
+      text-decoration: none;
+      border: 1px solid #4fc3f7;
+      padding: 8px 12px;
+      border-radius: 6px;
+    }
+    a:hover {
+      background: #4fc3f7;
+      color: #111;
+    }
+    .sketch {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <script src="sketch.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Site</h1>
+    <p>Check out my projects here:</p>
+    <a href="portfolio/">Go to Portfolio</a>
+  </header>
+  <div class="sketch"></div>
+  <footer>
+    <p>© <span id="year"></span> Your Name</p>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
