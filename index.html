@@ -33,7 +33,9 @@
       min-height: 60vh;
     }
   </style>
+  <!-- Load p5.js -->
   <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+  <!-- Load your sketch -->
   <script src="sketch.js" defer></script>
 </head>
 <body>
@@ -42,13 +44,15 @@
     <p>Check out my projects here:</p>
     <a href="portfolio/">Go to Portfolio</a>
   </header>
+
   <div class="sketch"></div>
+
   <footer>
     <p>© <span id="year"></span> Your Name</p>
   </footer>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-<script src="sketch.js">
 </body>
 </html>
