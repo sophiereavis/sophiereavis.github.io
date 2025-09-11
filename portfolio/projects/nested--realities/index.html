@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nested Realities — Sophie Reavis</title>
+
+  <base href="/portfolio/">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{ --bg:#FFFFFD; --text:#222; --navy:#0c2a52; --line:#ece9df; --muted:#6b6b6b; }
+    *{ box-sizing:border-box }
+    body{ margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
+
+    header{ border-bottom:1px solid var(--line); padding:16px 18px }
+    header a{ color:var(--navy); text-decoration:none; font-size:0.9rem }
+    header a:hover{ text-decoration:underline }
+
+    .wrap{ max-width:1000px; margin:0 auto }
+    .content{ max-width:900px; margin:0 auto; padding:24px 18px }
+
+    h1{ font-family:'Libre Baskerville',serif; font-style:italic; color:var(--navy); margin:6px 0 12px }
+    h2{ font-family:'Libre Baskerville',serif; color:var(--navy); margin:28px 0 10px }
+    p{ margin:0 0 14px }
+    .meta{ color:#555; margin-bottom:16px }
+
+    .hero-img{ width:100%; max-width:900px; border-radius:8px; margin:16px 0; display:block }
+
+    figure{ margin:20px 0 }
+    figure img{ width:100%; border-radius:8px; display:block }
+    figure figcaption{ margin-top:8px; font-size:0.9rem; color:#555 }
+
+    footer{ max-width:900px; margin:34px auto 24px; padding:12px 18px; color:var(--muted); text-align:center; border-top:1px solid var(--line) }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a href="projects/">← Back to Projects</a>
+  </header>
+
+  <div class="content">
+    <h1>Nested Realities</h1>
+    <p class="meta">Digital art • Blender + photography • Architectural rendering</p>
+
+    <!-- Cover (final composite render) -->
+    <img class="hero-img" src="assets/nested-realities-cover.jpg" alt="Treehouse rendered into campus tree (final composite)">
+
+    <h2>Overview</h2>
+    <p>
+      <em>Nested Realities</em> explores the space between the physical and the digital. I modeled a treehouse in Blender
+      and embedded it into a photograph of a real campus tree, creating an architectural intervention that exists between worlds.
+    </p>
+
+    <h2>Original Photograph</h2>
+    <figure>
+      <img src="assets/nested-realities-original.jpg" alt="Original photo of the campus tree before compositing">
+      <figcaption>The base image used for the composite—shot on campus.</figcaption>
+    </figure>
+
+    <h2>Modeling & Materials (Blender)</h2>
+    <figure>
+      <img src="assets/nested-realities-blender.jpg" alt="Blender viewport showing exterior and interior of the treehouse">
+      <figcaption>
+        A Blender viewport showing both the exterior and interior. This step highlights the textures, massing, and placement before compositing.
+      </figcaption>
+    </figure>
+
+    <h2>Final Composite</h2>
+    <figure>
+      <img src="assets/nested-realities-cover.jpg" alt="Final composite — treehouse integrated with the scene">
+      <figcaption>
+        Final render composited over the original photograph; lighting and perspective matched to blend the structure into the scene.
+      </figcaption>
+    </figure>
+
+    <!-- Optional: link to the full PDF if you decide to include it later -->
+    <!--
+    <p><a href="assets/nested-realities.pdf" target="_blank" rel="noopener">View full project PDF</a></p>
+    -->
+  </div>
+
+  <footer>
+    © <span id="year"></span> Sophie Reavis
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
