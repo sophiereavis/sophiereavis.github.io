@@ -1,8 +1,4 @@
-<!-- ========================= /
-     HOME PAGE (index.html)
-     Combined with your formatting (lighter cream bg, navy italic titles only),
-     plus a top nav linking to Portfolio and subpages.
-     Copy this entire first block into /index.html
+<!-- ========================= /\n     HOME PAGE (index.html) — updated hero styled like reference
 ========================== -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,39 +7,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sophie Reavis — Home</title>
   <meta name="description" content="Sophie Reavis — designer, researcher, and student‑athlete." />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root{ --bg:#fffdf6; --text:#333; --muted:#555; --navy:#001f3f; --border:#d8ceb6 }
+    :root{ --bg:#fffdf6; --text:#333; --muted:#6b6b6b; --navy:#001f3f; --border:#e9e0c9; --cream:#fff7e8; --orange:#e85a39 }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{ margin:0; font-family: Arial, Helvetica, sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
-    main{ max-width:960px; margin:0 auto; padding:24px }
+    main{ max-width:1080px; margin:0 auto; padding:24px }
     h1{ font-family:'Libre Baskerville', serif; font-style:italic; color:var(--navy); font-size:clamp(28px,4vw,42px); margin:20px 0 6px; text-align:center }
-    h2{ font-family: Arial, Helvetica, sans-serif; font-weight:700; color:var(--navy); margin:16px 0 8px }
+    h2{ font-weight:700; color:var(--navy); margin:16px 0 8px }
     p{ margin:0 auto 18px; max-width:72ch }
     p a{ color:var(--navy) }
-    img, video, iframe, audio, embed{ display:block; margin:0 auto }
-    img, video, iframe{ max-width:100%; height:auto; border:1px solid var(--border); border-radius:10px; background:#fff3 }
-    audio{ width:100%; max-width:720px }
-    .grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px }
-    .spacer{ height:48px }
-    #sketch{ display:flex; justify-content:center; align-items:center; min-height:320px; border:1px dashed var(--border); border-radius:10px }
-    footer{ max-width:960px; margin:40px auto 24px; padding:16px 24px; text-align:center; color:var(--muted) }
-    .caption{ color:var(--muted); font-size:.95rem; text-align:center; margin-top:8px }
+    img, video, iframe{ max-width:100%; height:auto; border-radius:12px }
 
     /* Top nav tabs */
     .topnav{position:sticky;top:0;z-index:10;background:#fffdf6cc;backdrop-filter:saturate(1.1) blur(2px);border-bottom:1px solid var(--border)}
-    .tabs{display:flex;gap:8px;justify-content:center;align-items:center;max-width:960px;margin:0 auto;padding:10px 12px}
+    .tabs{display:flex;gap:8px;justify-content:center;align-items:center;max-width:1080px;margin:0 auto;padding:10px 12px}
     .tabs a{display:inline-block;padding:10px 14px;border:1px solid var(--navy);border-radius:999px;color:var(--navy);text-decoration:none;font-family:'Libre Baskerville', serif;font-style:italic}
     .tabs a:hover{background:var(--navy);color:var(--bg)}
     .tabs a.active{background:var(--navy);color:var(--bg)}
 
-    /* Simple cards for home highlights */
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+    /* Hero card inspired by reference */
+    .hero-card{display:grid;grid-template-columns:1.15fr .85fr;gap:20px;align-items:center;background:var(--cream);border:1px solid var(--border);border-radius:18px;padding:22px;box-shadow:0 2px 0 #eadfca}
+    @media (max-width:900px){.hero-card{grid-template-columns:1fr}}
+    .wordmark{font-family:'Kalam', cursive;font-weight:700;font-size:clamp(72px,12vw,140px);line-height:.9;color:var(--orange);margin:0}
+    .tagline{font-family:'Libre Baskerville', serif;font-style:italic;color:var(--muted);margin-top:8px}
+    .hero-right{position:relative}
+    .hero-right img{width:100%;aspect-ratio:4/3;object-fit:cover;filter:grayscale(100%);border:1px solid var(--border)}
+    .corner{position:absolute;right:12px;bottom:12px;background:#ffffffd0;padding:6px 10px;border-radius:999px;border:1px solid var(--border);font-size:12px;letter-spacing:.06em;color:#777}
+
+    /* Cards under hero */
+    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:22px}
     .card{border:1px solid var(--border);border-radius:12px;padding:14px;background:#ffffff80}
     .card h3{margin:6px 0 8px;color:var(--navy)}
     .btn{display:inline-block;margin-top:6px;padding:8px 12px;border:1px solid var(--navy);border-radius:10px;color:var(--navy);text-decoration:none}
     .btn:hover{background:var(--navy);color:var(--bg)}
+
+    footer{ max-width:1080px; margin:40px auto 24px; padding:16px 24px; text-align:center; color:var(--muted) }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.js"></script>
   <script src="/sketch.js" defer></script>
@@ -59,10 +59,24 @@
   </div>
 
   <main>
-    <h1>Hi, I’m Sophie Reavis</h1>
-    <p class="caption">Designer • Researcher • Student‑Athlete</p>
+    <!-- Accessible H1 for SEO, visually tucked below; hero uses script wordmark -->
+    <h1 style="position:absolute;left:-9999px">Sophie Reavis — Designer, Researcher, Student‑Athlete</h1>
 
-    <section class="cards" style="margin-top:18px">
+    <section class="hero-card">
+      <div class="hero-left">
+        <div class="wordmark">sophie</div>
+        <div class="tagline">the portfolio</div>
+      </div>
+      <div class="hero-right">
+        <picture>
+          <source srcset="/IMG_6707.HEIC" type="image/heic" />
+          <img src="/IMG_6707.jpg" alt="Sophie standing by a wall — portfolio cover" />
+        </picture>
+        <div class="corner">SR / design</div>
+      </div>
+    </section>
+
+    <section class="cards">
       <article class="card">
         <h3>🌊 Coral Visualization</h3>
         <p>Interactive installation exploring coral bleaching via tides and light.</p>
@@ -79,23 +93,6 @@
         <a class="btn" href="/portfolio/final-project/">View project →</a>
       </article>
     </section>
-
-    <div class="spacer"></div>
-
-    <!-- Example media if you want to keep some on the home page -->
-    <div class="grid">
-      <figure>
-        <picture>
-          <source srcset="/IMG_6707.HEIC" type="image/heic" />
-          <img src="/IMG_6707.jpg" alt="Work in progress — image 6707" />
-        </picture>
-        <figcaption class="caption">IMG_6707</figcaption>
-      </figure>
-      <figure>
-        <img src="/Illustrator%20pill%20pack%20for%20internship.png" alt="Illustrator pill pack for internship" />
-        <figcaption class="caption">Illustrator pill pack</figcaption>
-      </figure>
-    </div>
   </main>
 
   <footer>
