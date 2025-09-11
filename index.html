@@ -3,40 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Name — Home</title>
-  <style>
-    body {
+  <title>Sophie Reavis — Home</title>
+<!-- Google Font: Libre Baskerville -->
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@1,400&display=swap" rel="stylesheet">
+<style>
+  body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      background: #fdf6e3; /* cream background */
+      color: #333;
       text-align: center;
-    }
+  }
     header {
       padding: 20px;
     }
-    a {
-      color: #4fc3f7;
+h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #001f3f; /* navy title */
+}
+      p.lead {
+      color: #555;
+      font-size: 1.1rem;
+      margin-top: 0;
+}
+a {
+      color: #001f3f;
       text-decoration: none;
-      border: 1px solid #4fc3f7;
+      border: 1px solid #001f3f;
       padding: 8px 12px;
       border-radius: 6px;
-    }
-    a:hover {
-      background: #4fc3f7;
-      color: #111;
-    }
-    .sketch {
+      transition: 0.2s;
+}
+a:hover {
+      background: #001f3f;
+      color: #fdf6e3;
+}
+.sketch {
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 60vh;
     }
-  </style>
-  <!-- Load p5.js -->
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
-  <!-- Load your sketch -->
-  <script src="sketch.js" defer></script>
+</style>
+    <!-- Load p5.js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.9.4/lib/p5.min.js"></script>
+    <!-- Load your sketch -->
+    <script src="sketch.js" defer></script>
 </head>
 <body>
   <header>
@@ -48,8 +62,7 @@
   <div class="sketch"></div>
 
   <footer>
-    <p>© <span id="year"></span> Your Name</p>
-  </footer>
+<p>© <span id="year"></span> Sophie Reavis | Built with HTML & p5.js</p>  </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
