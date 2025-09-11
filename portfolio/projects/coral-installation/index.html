@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coral Installation — Sophie Reavis</title>
+
+  <!-- Base so all links/images point from /portfolio/ -->
+  <base href="/portfolio/">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#FFFFFD; --text:#222; --navy:#0c2a52;
+      --line:#ece9df; --muted:#6b6b6b;
+    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+    header{border-bottom:1px solid var(--line);padding:16px 18px}
+    header a{color:var(--navy);text-decoration:none;font-size:0.9rem}
+    header a:hover{text-decoration:underline}
+
+    .content{max-width:900px;margin:0 auto;padding:24px 18px}
+    h1{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--navy);margin-bottom:12px}
+    p{margin-bottom:20px}
+
+    img{width:100%;max-width:900px;border-radius:8px;margin:20px 0;display:block}
+
+    footer{max-width:900px;margin:34px auto 24px;padding:12px 18px;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
+  </style>
+</head>
+<body>
+  <header>
+    <a href="projects/">← Back to Projects</a>
+  </header>
+
+  <div class="content">
+    <h1>Coral Installation</h1>
+    <p>
+      This installation explores the impact of coral bleaching through immersive visual and sculptural design.
+      Waves of color and form reveal the gradual fading of coral ecosystems, inviting viewers to reflect on
+      environmental change and ocean health.
+    </p>
+    <img src="assets/IMG_6809.png" alt="Coral Installation project photo" />
+  </div>
+
+  <footer>
+    © <span id="year"></span> Sophie Reavis
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
