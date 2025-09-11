@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sophie Reavis — Home</title>
-  <meta name="description" content="Sophie Reavis — designer, researcher, and student-athlete." />
+  <title>Sophie Reavis — Portfolio</title>
+  <meta name="description" content="Portfolio of Sophie Reavis — designer, researcher, and student-athlete." />
 
   <!-- Titles use Libre Baskerville; body stays system sans -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#FFFEFA;          /* almost white, light cream */
-      --text:#333;
+      --bg:#FFFFFD;       /* whiter cream */
+      --text:#222;
       --muted:#6b6b6b;
-      --navy:#001f3f;
-      --border:#ece6d6;
-      --blue:#2266cc;        /* squiggle color */
+      --navy:#0c2a52;     /* headings / brand */
+      --blue:#2e6edb;     /* accents (if needed later) */
+      --line:#ece9df;     /* top rule + footer rule */
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -28,135 +28,97 @@
       line-height:1.6;
     }
 
-    /* ---------- Top nav (tabs) ---------- */
-    .topnav{
-      position:sticky; top:0; z-index:10;
-      background:rgba(255,254,250,.92);
-      backdrop-filter:saturate(1.05) blur(2px);
-      border-bottom:1px solid var(--border);
+    /* ===== Minimal top bar with hairline ===== */
+    header{position:sticky;top:0;z-index:10;background:var(--bg)}
+    .topline{height:10px;border-bottom:1px solid var(--line)}
+    .nav{
+      max-width:1200px;margin:0 auto;
+      display:grid;grid-template-columns:1fr auto;align-items:center;
+      gap:12px;padding:14px 18px
     }
-    .tabs{
-      display:flex; gap:8px; justify-content:center; align-items:center;
-      max-width:1200px; margin:0 auto; padding:10px 12px;
+    .brand{
+      justify-self:start;
+      font-family:'Libre Baskerville',serif;
+      font-style:italic;
+      color:var(--navy);
+      font-size:clamp(22px,2.6vw,32px);
+      letter-spacing:.02em
     }
-    .tabs a{
-      display:inline-block; padding:10px 14px;
-      border:1px solid var(--navy); border-radius:999px;
-      color:var(--navy); text-decoration:none;
-      font-family:'Libre Baskerville', serif; font-style:italic;
-    }
-    .tabs a:hover{ background:var(--navy); color:var(--bg) }
-    .tabs a.active{ background:var(--navy); color:var(--bg) }
+    .menu{display:flex;gap:18px}
+    .menu a{color:var(--navy);text-decoration:none;font-size:0.95rem}
+    .menu a:hover{color:#154b9e}
 
-    /* ---------- Page container ---------- */
-    main{ max-width:1200px; margin:0 auto; padding:24px }
-
-    /* ---------- Hero: centered word, image on right ---------- */
+    /* ===== Hero: left column words, right column portrait ===== */
+    main{max-width:1200px;margin:0 auto;padding:32px 18px 24px}
     .hero{
       display:grid;
-      grid-template-columns:1fr minmax(320px,520px);
-      align-items:center;
-      gap:24px;
-      margin-top:40px;
+      grid-template-columns:1fr minmax(280px,520px);
+      gap:28px;align-items:center;margin-top:8px
     }
+    .words{color:var(--navy)}
+    .word{
+      font-family:'Libre Baskerville',serif;
+      font-style:normal;font-weight:700;margin:0;
+      line-height:0.9;letter-spacing:.02em;
+      font-size:clamp(46px,9vw,112px)
+    }
+    .word:nth-child(2){opacity:.85}
+    .word:nth-child(3){opacity:.7}
+    .word:nth-child(4){opacity:.55}
 
-    /* Big straight word centered */
-    .hero-title{
-      grid-column:1 / -1;
-      text-align:center;
-      margin-bottom:28px;
-      position:relative;
-    }
-    .hero-title .word{
-      margin:0;
-      font-family:'Libre Baskerville', serif;
-      font-weight:700;           /* straight (not italic) */
-      font-style:normal;
-      letter-spacing:.04em;
-      font-size:clamp(64px,12vw,160px);
-      color:var(--navy);
-      position:relative;
-      z-index:2;
-    }
-
-    /* Paintbrush squiggle line under the word (SVG below) */
-    .squiggle-wrap{
-      position:absolute; left:50%; transform:translateX(-50%);
-      bottom:-20px; width:min(720px,62vw); height:36px; z-index:1;
-    }
-    .squiggle{
-      width:100%; height:100%;
-      display:block;
-    }
-
-    /* Right-side image */
-    .hero-media{ grid-column:2 }
-    .hero-media img{
-      width:100%; display:block; border-radius:10px;
+    .portrait{justify-self:end}
+    .portrait img{
+      width:100%;max-width:520px;display:block;border-radius:12px;
+      box-shadow:0 10px 30px rgba(12,42,82,.08)
     }
 
     /* Footer */
     footer{
-      max-width:1200px; margin:40px auto 24px;
-      padding:16px 24px; text-align:center; color:var(--muted)
+      max-width:1200px;margin:34px auto 24px;
+      padding:12px 18px;color:var(--muted);
+      text-align:center;border-top:1px solid var(--line)
     }
 
-    /* Small screens: stack image below */
-    @media (max-width:800px){
-      .hero{ grid-template-columns:1fr }
-      .hero-media{ grid-column:1 }
+    /* Mobile */
+    @media (max-width:820px){
+      .hero{grid-template-columns:1fr}
+      .portrait{justify-self:center;order:2}
+      .words{order:1;text-align:center}
     }
   </style>
 </head>
 <body>
-  <!-- Tabs -->
-  <div class="topnav">
-    <nav class="tabs" aria-label="Site">
-      <a class="active" href="/">Home</a>
-      <a href="/portfolio/">Portfolio</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-    </nav>
-  </div>
+  <header>
+    <div class="topline"></div>
+    <div class="nav">
+      <div class="brand">sophie reavis</div>
+      <nav class="menu" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
-    <!-- Title + paintbrush squiggle -->
     <section class="hero">
-      <div class="hero-title">
+      <div class="words" aria-hidden="true">
         <h1 class="word">PORTFOLIO</h1>
-
-        <!-- Brushy squiggle: an SVG path with roughen-ish filter -->
-        <div class="squiggle-wrap" aria-hidden="true">
-          <svg class="squiggle" viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <defs>
-              <!-- Adds a hand-drawn wobble -->
-              <filter id="rough">
-                <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="3" />
-                <feDisplacementMap in="SourceGraphic" scale="6" />
-              </filter>
-            </defs>
-            <!-- Curvy brush-like line -->
-            <path d="M 10 70
-                     C 150 20, 250 120, 360 60
-                     S 600 5, 720 60
-                     S 900 110, 990 40"
-                  fill="none" stroke="var(--blue)" stroke-width="18"
-                  stroke-linecap="round" stroke-linejoin="round"
-                  filter="url(#rough)"/>
-          </svg>
-        </div>
+        <h1 class="word">PORTFOLIO</h1>
+        <h1 class="word">PORTFOLIO</h1>
+        <h1 class="word">PORTFOLIO</h1>
       </div>
-
-      <!-- Image on the right -->
-      <div class="hero-media">
-        <!-- Replace the src if your file is somewhere else -->
-        <img src="/IMG_8396.png" alt="Portrait of Sophie Reavis" />
+      <div class="portrait">
+        <!-- Put your image at /assets/IMG_8396.jpg (recommended).
+             If it’s elsewhere, update the path and exact filename/case. -->
+        <img src="/assets/IMG_8396.jpg" alt="Portrait of Sophie Reavis" />
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© <span id="year"></span> Sophie Reavis</p>
+    © <span id="year"></span> Sophie Reavis
   </footer>
 
   <script>
