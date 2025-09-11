@@ -5,43 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projects — Sophie Reavis</title>
   <meta name="description" content="Projects by Sophie Reavis." />
+
+  <!-- Make all relative URLs resolve from /portfolio/ -->
+  <base href="/portfolio/">
+
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#FFFFFD;
-      --text:#222;
-      --navy:#0c2a52;
-      --line:#ece9df;
-      --overlay:#0b0b0b;
-      --accent:#2e6edb;
+      --bg:#FFFFFD; --text:#222; --navy:#0c2a52;
+      --line:#ece9df; --overlay:#0b0b0b; --hover:#154b9e;
     }
     *{box-sizing:border-box}
     body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
 
+    /* Top bar */
     header{position:sticky;top:0;z-index:5;background:var(--bg)}
     .topline{height:10px;border-bottom:1px solid var(--line)}
     .nav{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;padding:14px 18px}
     .brand{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--navy);font-size:clamp(22px,2.6vw,32px)}
     .menu{display:flex;gap:18px}
     .menu a{color:var(--navy);text-decoration:none;font-size:.95rem}
-    .menu a:hover{color:#154b9e}
+    .menu a:hover{color:var(--hover)}
 
     main{max-width:1200px;margin:0 auto;padding:26px 18px 40px}
     h1{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--navy);text-align:center;margin:8px 0 24px;letter-spacing:.02em}
 
+    /* Project cards */
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-
     .card{position:relative;border-radius:12px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.05)}
     .card a{display:block;position:relative;color:inherit;text-decoration:none}
     .card img{display:block;width:100%;height:auto}
-
     .label{position:absolute;left:0;right:0;bottom:0;background:var(--overlay);color:#fff;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:10px}
     .title{font-size:0.95rem;font-weight:700;letter-spacing:.02em}
     .meta{font-size:0.8rem;opacity:.8}
-
     .card:hover{transform:translateY(-2px);transition:transform .15s ease, box-shadow .2s ease;box-shadow:0 12px 26px rgba(0,0,0,.08)}
-    .card:hover .label{background:linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.8))}
-    .card:focus-within{outline:2px solid var(--accent)}
+    .card:hover .label{background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.85))}
 
     footer{max-width:1200px;margin:28px auto;padding:12px 18px;border-top:1px solid var(--line);text-align:center;color:#666}
   </style>
@@ -52,10 +51,10 @@
     <div class="nav">
       <div class="brand">sophie reavis</div>
       <nav class="menu" aria-label="Main">
-        <a href="/">Home</a>
-        <a class="active" href="/projects/">Projects</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
+        <a href="./">Home</a>
+        <a class="active" href="projects/">Projects</a>
+        <a href="about/">About</a>
+        <a href="contact/">Contact</a>
       </nav>
     </div>
   </header>
@@ -64,10 +63,11 @@
     <h1>Projects</h1>
 
     <section class="grid">
-      <!-- Single project card -->
+      <!-- Project 1 -->
       <article class="card">
-        <a href="/projects/coral-installation/" aria-label="Open project: Coral Installation">
-          <img src="/assets/IMG_6809.png" alt="Coral Installation cover image" />
+        <a href="projects/coral-installation/" aria-label="Open project: Coral Installation">
+          <!-- Cover image: ensure this file exists at /portfolio/assets/IMG_6809.png -->
+          <img src="assets/IMG_6809.png" alt="Coral Installation cover image" />
           <div class="label">
             <span class="title">CORAL INSTALLATION</span>
             <span class="meta">Design — Developing</span>
