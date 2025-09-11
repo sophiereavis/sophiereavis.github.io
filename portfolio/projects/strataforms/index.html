@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Strataforms — Sophie Reavis</title>
 
+  <!-- Make all relative URLs resolve from /portfolio/ -->
   <base href="/portfolio/">
+
+  <!-- Font to match the site -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
@@ -18,13 +21,16 @@
     header a:hover{ text-decoration:underline }
 
     .content{ max-width:900px; margin:0 auto; padding:24px 18px }
-    h1{ font-family:'Libre Baskerville',serif; font-style:italic; color:var(--navy); margin-bottom:12px }
+    h1{ font-family:'Libre Baskerville',serif; font-style:italic; color:var(--navy); margin:6px 0 12px }
     h2{ font-family:'Libre Baskerville',serif; color:var(--navy); margin:28px 0 10px }
-    p{ margin-bottom:20px }
+    p{ margin:0 0 18px }
 
-    img{ width:100%; max-width:900px; border-radius:8px; margin:20px 0; display:block }
-    figure{ margin:20px 0 }
+    figure{ margin:18px 0 }
+    figure img{ width:100%; border-radius:8px; display:block }
     figure figcaption{ margin-top:8px; font-size:0.9rem; color:#555 }
+
+    .grid-2{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
+    @media (max-width: 720px){ .grid-2{ grid-template-columns:1fr } }
 
     footer{ max-width:900px; margin:34px auto 24px; padding:12px 18px; color:var(--muted); text-align:center; border-top:1px solid var(--line) }
   </style>
@@ -37,23 +43,49 @@
   <div class="content">
     <h1>Strataforms</h1>
     <p>
-      <em>Strataforms</em> explores the layered growth of shells and oysters through digital modeling in Blender. 
-      The forms resemble both marine life and topographic maps, inviting viewers to see natural processes as 
-      architectural and cartographic.
+      <em>Strataforms</em> explores the layered growth of shells and oysters through digital modeling in Blender.
+      The forms echo topographic maps—contours building up like sediment—inviting viewers to see natural processes
+      as both architectural and cartographic.
     </p>
 
-    <!-- Cover render -->
+    <!-- Final render (cover) -->
     <figure>
-      <img src="assets/strataforms-cover.jpg" alt="Render of layered shell forms on sand">
+      <img src="assets/strataforms-cover.jpg" alt="Final render of layered shell forms on sand">
       <figcaption>Final render of digitally sculpted shells resembling topographic landscapes.</figcaption>
     </figure>
 
-    <!-- (Optional) Add Blender viewport or WIP screenshots later -->
-    <!--
+    <!-- Sketch ideas (two images) -->
+    <h2>Sketch Ideas</h2>
+    <div class="grid-2">
+      <figure>
+        <img src="assets/strataforms-sketch1.jpg" alt="Sketch of shell layers concept">
+        <figcaption>Initial exploration of shells as stacked contours.</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/strataforms-sketch2.jpg" alt="Sketch of oyster layering concept">
+        <figcaption>Variation referencing oyster growth rings and strata.</figcaption>
+      </figure>
+    </div>
+
+    <!-- More angles (small gallery: 2 side-by-side + 1 full width) -->
+    <h2>More Angles</h2>
+    <div class="grid-2">
+      <figure>
+        <img src="assets/strataforms-angle1.jpg" alt="Alternate render angle of shell forms">
+      </figure>
+      <figure>
+        <img src="assets/strataforms-angle2.jpg" alt="Side view render of shell forms">
+      </figure>
+    </div>
+    <figure>
+      <img src="assets/strataforms-angle3.jpg" alt="Top-down view render of shell forms">
+    </figure>
+
+    <!-- Optional: add a process/Blender viewport later
     <h2>Process</h2>
     <figure>
-      <img src="assets/strataforms-blender.jpg" alt="Blender viewport showing shell model">
-      <figcaption>Blender viewport showing the layered modeling process.</figcaption>
+      <img src="assets/strataforms-blender.jpg" alt="Blender viewport showing layered modeling process">
+      <figcaption>Blender viewport showing modifiers and stacked-slice approach.</figcaption>
     </figure>
     -->
   </div>
