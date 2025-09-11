@@ -6,17 +6,16 @@
   <title>Sophie Reavis — Portfolio</title>
   <meta name="description" content="Portfolio of Sophie Reavis — designer, researcher, and student-athlete." />
 
-  <!-- Titles use Libre Baskerville; body stays system sans -->
+  <!-- Titles use Libre Baskerville -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#FFFFFD;       /* whiter cream */
+      --bg:#FFFFFD;       /* almost white cream */
       --text:#222;
       --muted:#6b6b6b;
-      --navy:#0c2a52;     /* headings / brand */
-      --blue:#2e6edb;     /* accents (if needed later) */
-      --line:#ece9df;     /* top rule + footer rule */
+      --navy:#0c2a52;
+      --line:#ece9df;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -28,7 +27,7 @@
       line-height:1.6;
     }
 
-    /* ===== Minimal top bar with hairline ===== */
+    /* ===== Top bar ===== */
     header{position:sticky;top:0;z-index:10;background:var(--bg)}
     .topline{height:10px;border-bottom:1px solid var(--line)}
     .nav{
@@ -48,7 +47,7 @@
     .menu a{color:var(--navy);text-decoration:none;font-size:0.95rem}
     .menu a:hover{color:#154b9e}
 
-    /* ===== Hero: left column words, right column portrait ===== */
+    /* ===== Hero ===== */
     main{max-width:1200px;margin:0 auto;padding:32px 18px 24px}
     .hero{
       display:grid;
@@ -72,7 +71,7 @@
       box-shadow:0 10px 30px rgba(12,42,82,.08)
     }
 
-    /* Footer */
+    /* ===== Footer ===== */
     footer{
       max-width:1200px;margin:34px auto 24px;
       padding:12px 18px;color:var(--muted);
@@ -93,8 +92,8 @@
     <div class="nav">
       <div class="brand">sophie reavis</div>
       <nav class="menu" aria-label="Main">
-        <a href="/">Home</a>
-        <a href="/portfolio/">Portfolio</a>
+        <a class="active" href="/">Home</a>
+        <a href="/projects/">Projects</a>
         <a href="/about/">About</a>
         <a href="/contact/">Contact</a>
       </nav>
@@ -110,9 +109,8 @@
         <h1 class="word">PORTFOLIO</h1>
       </div>
       <div class="portrait">
-        <!-- Put your image at /assets/IMG_8396.png (recommended).
-             If it’s elsewhere, update the path and exact filename/case. -->
-        <img src="/assets/IMG_8396.png" alt="Portrait of Sophie Reavis" />
+        <!-- Update the path if image lives in /assets/ -->
+        <img src="/assets/IMG_8396.jpg" alt="Portrait of Sophie Reavis" />
       </div>
     </section>
   </main>
