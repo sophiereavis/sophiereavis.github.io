@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Coral Installation — Sophie Reavis</title>
+  <title>The Moon Illuminates What the Reef Remembers — Sophie Reavis</title>
 
-  <!-- Base so all links/images point from /portfolio/ -->
+  <!-- Make all relative URLs resolve from /portfolio/ -->
   <base href="/portfolio/">
 
   <!-- Font -->
@@ -16,38 +16,91 @@
       --bg:#FFFFFD; --text:#222; --navy:#0c2a52;
       --line:#ece9df; --muted:#6b6b6b;
     }
+    *{box-sizing:border-box}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 
     header{border-bottom:1px solid var(--line);padding:16px 18px}
     header a{color:var(--navy);text-decoration:none;font-size:0.9rem}
     header a:hover{text-decoration:underline}
 
+    .wrap{max-width:1000px;margin:0 auto}
     .content{max-width:900px;margin:0 auto;padding:24px 18px}
-    h1{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--navy);margin-bottom:12px}
-    p{margin-bottom:20px}
 
-    img{width:100%;max-width:900px;border-radius:8px;margin:20px 0;display:block}
+    h1{font-family:'Libre Baskerville',serif;font-style:italic;color:var(--navy);margin:6px 0 12px}
+    h2{font-family:'Libre Baskerville',serif;color:var(--navy);margin:28px 0 10px}
+    p{margin:0 0 14px}
+    .meta{color:#555;margin-bottom:16px}
+
+    .hero-img{width:100%;max-width:900px;border-radius:8px;margin:16px 0;display:block}
+
+    /* Side-by-side figure */
+    .figure-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;margin:18px 0}
+    .figure-grid img{width:100%;border-radius:8px;display:block}
+    .figure-grid figcaption{grid-column:1/-1;margin-top:8px;font-size:0.9rem;color:#555}
+
+    /* Single figure */
+    figure{margin:20px 0}
+    figure img{width:100%;border-radius:8px;display:block}
+    figure figcaption{margin-top:8px;font-size:0.9rem;color:#555}
+
+    /* Video */
+    video{width:100%;max-width:900px;border-radius:8px;display:block;margin:0 auto}
 
     footer{max-width:900px;margin:34px auto 24px;padding:12px 18px;color:var(--muted);text-align:center;border-top:1px solid var(--line)}
   </style>
 </head>
 <body>
-  <header>
+  <header class="wrap">
     <a href="projects/">← Back to Projects</a>
   </header>
 
   <div class="content">
-    <h1>Coral Installation</h1>
+    <h1>The Moon Illuminates What the Reef Remembers</h1>
+    <p class="meta">Immersive installation • sound • scent • light</p>
+
     <p>
-      This installation explores the impact of coral bleaching through immersive visual and sculptural design.
-      Waves of color and form reveal the gradual fading of coral ecosystems, inviting viewers to reflect on
-      environmental change and ocean health.
+      <em>The Moon Illuminates What the Reef Remembers</em> is a commentary on the ocean as a vast world we still
+      understand only in fragments. While the surface shimmers with beauty, devastating changes like coral bleaching
+      are unfolding below and demand our attention.
     </p>
-<img
-  src="assets/IMG_6809 (2).jpg"
-  alt="Coral Installation project photo"
-  style="width:100%;max-width:900px;border-radius:8px;margin:20px 0;display:block"
-/>
+    <p>
+      The installation layers multiple senses to build an eerie, immersive experience. A haunting soundtrack fills the room
+      as projections ripple and shift in the background. Each coral is paired with a distinct scent—healthy coral carries a
+      sweet fragrance, and each subsequent stage grows harsher until the dead coral smells unmistakably of decay.
+    </p>
+
+    <!-- Cover picture -->
+    <img class="hero-img" src="assets/IMG_6809 (2).jpg" alt="Installation view — corals and projection">
+
+    <h2>Modeling & 3D Printing (Stage 2 Bleaching)</h2>
+    <figure class="figure-grid">
+      <img src="assets/coral-blender.jpg" alt="Coral model in Blender">
+      <img src="assets/IMG_6708.jpg" alt="3D print slicing software showing coral">
+      <figcaption>
+        <strong>Using Blender and 3D printing</strong>, I modeled this coral form to represent the second stage of bleaching.
+        At this stage, the coral begins to lose its color—turning white and shrinking in complexity.
+      </figcaption>
+    </figure>
+
+    <h2>Installation Lighting</h2>
+    <figure>
+      <img src="assets/IMG_6805.jpg" alt="Illuminated 3D printed corals on pedestals with projection">
+      <figcaption>
+        I illuminated the printed corals to highlight color shifts across stages. The bleached coral sits on the left
+        pedestal, glowing with a stark, pale hue to emphasize the loss of vibrancy.
+      </figcaption>
+    </figure>
+
+    <h2>Final Environment (Video)</h2>
+    <figure>
+      <video controls>
+        <source src="assets/coral-installation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <figcaption>
+        Final installation: projection mapping, sound, and fabricated corals combine into a single immersive environment.
+      </figcaption>
+    </figure>
   </div>
 
   <footer>
