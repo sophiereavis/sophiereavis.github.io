@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Arduino Lie Detector — Sophie Reavis</title>
 
-  <!-- All relative URLs start from /portfolio/ -->
   <base href="/portfolio/">
 
-  <!-- Font to match site -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <style>
@@ -30,7 +28,6 @@
 
     .hero-img{ width:100%; max-width:900px; border-radius:8px; margin:16px 0; display:block }
 
-    /* Grid figures */
     .figure-grid{ display:grid; grid-template-columns:1fr 1fr; gap:12px; align-items:start; margin:18px 0 }
     .figure-grid img{ width:100%; border-radius:8px; display:block }
     .figure-grid figcaption{ grid-column:1/-1; margin-top:8px; font-size:0.9rem; color:#555 }
@@ -39,7 +36,7 @@
     figure img{ width:100%; border-radius:8px; display:block }
     figure figcaption{ margin-top:8px; font-size:0.9rem; color:#555 }
 
-    video{ width:100%; max-width:900px; border-radius:8px; display:block; margin:0 auto }
+    iframe{ width:100%; max-width:900px; border-radius:8px; display:block; margin:0 auto }
 
     .info{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px; margin:20px 0 }
     .info strong{ display:block; color:#444; margin-bottom:4px }
@@ -56,71 +53,43 @@
     <h1>Arduino Lie Detector</h1>
     <p class="meta">Interactive hardware • Arduino • GSR + pulse • LEDs + sound</p>
 
-    <!-- Optional cover image -->
-    <img class="hero-img" src="assets/arduino-cover.jpg" alt="Arduino lie detector setup on breadboard">
+    <!-- Cover image -->
+    <img class="hero-img" src="assets/arduino-cover.jpg" alt="Arduino Lie Detector cover photo">
 
-    <section class="info">
-      <div>
-        <strong>Overview</strong>
-        A playful “lie detector” built with Arduino that reads galvanic skin response (GSR) and pulse to infer arousal changes,
-        driving LEDs and a buzzer for immediate feedback.
-      </div>
-      <div>
-        <strong>My Role</strong>
-        Circuit design, Arduino code, enclosure, user testing
-      </div>
-      <div>
-        <strong>Sensors</strong>
-        GSR (skin conductance), pulse sensor
-      </div>
-      <div>
-        <strong>Outputs</strong>
-        LED bargraph, piezo buzzer, serial logging
-      </div>
-    </section>
-
-    <h2>Circuit & Prototype</h2>
-    <!-- Two images side-by-side: breadboard + enclosure (replace filenames with yours) -->
-    <figure class="figure-grid">
-      <img src="assets/arduino-breadboard.jpg" alt="Breadboard prototype with GSR and pulse sensor">
-      <img src="assets/arduino-enclosure.jpg" alt="Laser-cut enclosure with LEDs and buzzer">
-      <figcaption>
-        Early breadboard prototype (left) wired for quick iteration; a simple enclosure (right) improves stability and usability.
-      </figcaption>
-    </figure>
-
-    <h2>How It Works</h2>
+    <h2>Overview</h2>
     <p>
-      The GSR sensor measures small changes in skin conductance correlated with arousal. Readings are smoothed and mapped to
-      an LED bargraph and buzzer. The pulse sensor adds a heartbeat cue for timing. This is not a medical device or a real
-      polygraph—it's an interactive demo showing how bio-signal inputs can drive playful outputs.
+      A playful “lie detector” built with Arduino that uses a galvanic skin response (GSR) sensor and a pulse sensor.
+      Readings are mapped to LEDs and sound, creating an interactive demo of how bio-signals can be turned into playful outputs.
     </p>
 
-    <!-- Code image or diagram (optional) -->
-    <figure>
-      <img src="assets/arduino-diagram.jpg" alt="System diagram of sensors to Arduino to outputs">
+    <h2>Circuit & Prototype</h2>
+    <figure class="figure-grid">
+      <img src="assets/arduino-diagram.jpg" alt="Arduino circuit diagram">
+      <img src="assets/arduino-photo.jpg" alt="Photo of Arduino Lie Detector prototype">
       <figcaption>
-        System diagram: GSR + pulse → Arduino → LED bargraph + buzzer. Thresholds and hysteresis prevent flicker.
+        Circuit diagram (left) shows system layout; prototype photo (right) shows the working build with sensors, LEDs, and buzzer.
       </figcaption>
     </figure>
 
     <h2>Demo Video</h2>
-    <!-- If you add a video file, put it in /portfolio/assets/ and update the filename -->
     <figure>
-      <video controls>
-        <source src="assets/arduino-demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      <iframe height="400"
+              src="https://www.youtube.com/embed/eb7mFwE6t-U"
+              title="Arduino Lie Detector Demo Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+      </iframe>
       <figcaption>
-        Quick walkthrough of the sensor readings and output behavior during a simple Q&A.
+        Demo video showing how the sensors respond to changes in skin conductance and heartbeat.
       </figcaption>
     </figure>
 
     <h2>Notes & Learnings</h2>
     <p>
-      Sensor signals are noisy—simple moving averages helped. Grounding, stable power, and consistent finger contact
-      made a big difference. Calibrating per-user avoids false positives. The project is intentionally lighthearted but
-      sparked great conversations about biometrics and interpretation.
+      Biometric signals are noisy — I used simple moving averages to stabilize readings.  
+      Calibration is important since each person’s baseline differs, which helps avoid false positives.  
+      This project was a fun way to explore the intersection of hardware, design, and playful interaction.
     </p>
   </div>
 
