@@ -69,13 +69,16 @@
     .word:nth-child(4){opacity:.55}
 
     .portrait{justify-self:end}
-    .portrait img{
-      width:100%;
-      max-width:480px;   /* keep it from being too big */
-      height:auto;
-      display:block;
-      border-radius:12px;
-      box-shadow:0 10px 30px rgba(12,42,82,.08)
+    .portrait img {
+        width: 100%;
+        max-width: 520px;        /* don’t let it get too wide */
+        height: 100%;            /* stretch to match the text column */
+        object-fit: cover;       /* crop if proportions don’t match */
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(12,42,82,.08);
+}
+
       /* If your image is very tall, you can also cap height:
          max-height: 70vh; object-fit: cover; */
     }
