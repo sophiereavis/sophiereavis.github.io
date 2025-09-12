@@ -7,24 +7,47 @@
 
   <base href="/portfolio/">
 
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Fonts: Inter (body) + Montserrat (titles/brand) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{ --bg:#FFFFFD; --text:#222; --navy:#0c2a52; --line:#ece9df; --muted:#6b6b6b; }
     *{ box-sizing:border-box }
-    body{ margin:0; font-family:Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text); line-height:1.6 }
+    body{
+      margin:0;
+      font-family:'Inter', Arial, Helvetica, sans-serif; /* Body font */
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
 
     header{ border-bottom:1px solid var(--line); padding:16px 18px }
-    header a{ color:var(--navy); text-decoration:none; font-size:0.9rem }
-    header a:hover{ text-decoration:underline }
+    header a{
+      color:var(--navy);
+      text-decoration:none;
+      font-size:0.9rem;
+      font-family:'Inter', Arial, sans-serif;
+    }
+    header a:hover{text-decoration:underline}
 
     .wrap{ max-width:1000px; margin:0 auto }
     .content{ max-width:900px; margin:0 auto; padding:24px 18px }
 
-    h1{ font-family:'Libre Baskerville',serif; font-style:italic; color:var(--navy); margin:6px 0 12px }
-    h2{ font-family:'Libre Baskerville',serif; color:var(--navy); margin:28px 0 10px }
-    p{ margin:0 0 14px }
-    .meta{ color:#555; margin-bottom:16px }
+    h1{
+      font-family:'Montserrat', sans-serif; /* Title font */
+      font-weight:700;
+      color:var(--navy);
+      margin:6px 0 12px;
+      letter-spacing:.02em;
+    }
+    h2{
+      font-family:'Montserrat', sans-serif;
+      font-weight:600;
+      color:var(--navy);
+      margin:28px 0 10px;
+    }
+    p{ margin:0 0 14px; font-family:'Inter', Arial, sans-serif }
+    .meta{ color:#555; margin-bottom:16px; font-family:'Inter', Arial, sans-serif }
 
     .hero-img{ width:100%; max-width:900px; border-radius:8px; margin:16px 0; display:block }
 
@@ -38,10 +61,18 @@
 
     iframe{ width:100%; max-width:900px; border-radius:8px; display:block; margin:0 auto }
 
-    .info{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px; margin:20px 0 }
+    .info{
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px; background:#fff; border:1px solid var(--line);
+      border-radius:10px; padding:14px; margin:20px 0
+    }
     .info strong{ display:block; color:#444; margin-bottom:4px }
 
-    footer{ max-width:900px; margin:34px auto 24px; padding:12px 18px; color:var(--muted); text-align:center; border-top:1px solid var(--line) }
+    footer{
+      max-width:900px; margin:34px auto 24px; padding:12px 18px;
+      color:var(--muted); text-align:center; border-top:1px solid var(--line);
+      font-family:'Inter', Arial, sans-serif;
+    }
   </style>
 </head>
 <body>
