@@ -9,8 +9,8 @@
   <!-- Make all relative URLs resolve from /portfolio/ -->
   <base href="/portfolio/">
 
-  <!-- Titles use Libre Baskerville -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Fonts: Inter (body) + Montserrat (titles/brand) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -24,7 +24,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family:Arial, Helvetica, sans-serif;
+      font-family:'Inter', Arial, Helvetica, sans-serif; /* Consistent sans-serif body */
       background:var(--bg);
       color:var(--text);
       line-height:1.6;
@@ -40,14 +40,14 @@
     }
     .brand{
       justify-self:start;
-      font-family:'Libre Baskerville',serif;
-      font-style:italic;
+      font-family:'Montserrat', sans-serif;   /* Sans for brand */
+      font-weight:700;
       color:var(--navy);
       font-size:clamp(22px,2.6vw,32px);
-      letter-spacing:.02em
+      letter-spacing:.02em;
     }
     .menu{display:flex;gap:18px}
-    .menu a{color:var(--navy);text-decoration:none;font-size:0.95rem}
+    .menu a{color:var(--navy);text-decoration:none;font-size:0.95rem;font-weight:500}
     .menu a:hover{color:#154b9e}
 
     /* ===== Hero ===== */
@@ -59,28 +59,28 @@
     }
     .words{color:var(--navy)}
     .word{
-      font-family:'Libre Baskerville',serif;
-      font-style:normal;font-weight:700;margin:0;
-      line-height:0.9;letter-spacing:.02em;
-      font-size:clamp(46px,9vw,112px)
+      font-family:'Montserrat', sans-serif;  /* Sans for title words */
+      font-weight:700;
+      margin:0;
+      line-height:0.9;
+      letter-spacing:.02em;
+      font-size:clamp(46px,9vw,112px);
     }
     .word:nth-child(2){opacity:.85}
     .word:nth-child(3){opacity:.7}
     .word:nth-child(4){opacity:.55}
 
     .portrait{justify-self:end}
-    .portrait img {
-        width: 100%;
-        max-width: 520px;        /* don’t let it get too wide */
-        height: 100%;            /* stretch to match the text column */
-        object-fit: cover;       /* crop if proportions don’t match */
-        display: block;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(12,42,82,.08);
-}
-
+    .portrait img{
+      width:100%;
+      max-width:520px;           /* don’t let it get too wide */
+      height:100%;               /* stretch to match the text column */
+      object-fit:cover;          /* crop if proportions don’t match */
+      display:block;
+      border-radius:12px;
+      box-shadow:0 10px 30px rgba(12,42,82,.08);
       /* If your image is very tall, you can also cap height:
-         max-height: 70vh; object-fit: cover; */
+         max-height:70vh; object-fit:cover; */
     }
 
     /* ===== Footer ===== */
