@@ -22,7 +22,7 @@
       margin:0;
       background:var(--bg);
       color:var(--text);
-      font-family:'Inter', Arial, Helvetica, sans-serif;  /* Consistent sans-serif body */
+      font-family:'Inter', Arial, Helvetica, sans-serif;
     }
 
     /* Top bar */
@@ -34,7 +34,7 @@
       padding:14px 18px
     }
     .brand{
-      font-family:'Montserrat', sans-serif;           /* Sans for brand */
+      font-family:'Montserrat', sans-serif;
       font-weight:700;
       color:var(--navy);
       font-size:clamp(22px,2.6vw,32px);
@@ -46,7 +46,7 @@
 
     main{max-width:1200px;margin:0 auto;padding:26px 18px 40px}
     h1{
-      font-family:'Montserrat', sans-serif;          /* Sans for headings */
+      font-family:'Montserrat', sans-serif;
       font-weight:700;
       color:var(--navy);
       text-align:center;
@@ -57,7 +57,7 @@
     /* Project cards */
     .grid{
       display:grid;
-      grid-template-columns:repeat(2, 1fr); /* 2 per row on desktop */
+      grid-template-columns:repeat(2, 1fr); /* exactly 2 per row */
       gap:20px;
       margin-top:10px;
     }
@@ -75,11 +75,10 @@
     .card:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(0,0,0,.08)}
     .card:hover .label{background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.85))}
 
-    /* Consistent cover sizing */
     .card img{
       display:block;width:100%;
-      height:220px;                /* make all covers same height */
-      object-fit:cover;            /* crop neatly */
+      height:220px;
+      object-fit:cover;
     }
 
     .label{
@@ -90,13 +89,13 @@
       display:flex;justify-content:space-between;align-items:center;gap:10px
     }
     .title{
-      font-family:'Montserrat', sans-serif;          /* Sans for titles */
+      font-family:'Montserrat', sans-serif;
       font-weight:700;
       font-size:0.95rem;
       letter-spacing:.02em
     }
     .meta{
-      font-family:'Inter', Arial, Helvetica, sans-serif; /* Sans meta */
+      font-family:'Inter', Arial, Helvetica, sans-serif;
       font-size:0.8rem;opacity:.85
     }
 
@@ -125,76 +124,79 @@
 
     <section class="grid">
       <!-- Coral Installation -->
-<article class="card">
-  <a href="projects/coral-installation/">
-    <img src="assets/IMG_6809%20(2).jpg" alt="Coral Installation cover image" />
-    <div class="label">
-      <span class="title">CORAL INSTALLATION</span>
-      <span class="meta">Design — Developing</span>
-    </div>
-  </a>
-</article>
+      <article class="card">
+        <a href="projects/coral-installation/">
+          <img src="assets/IMG_6809%20(2).jpg" alt="Coral Installation cover image" />
+          <div class="label">
+            <span class="title">CORAL INSTALLATION</span>
+            <span class="meta">Design — Developing</span>
+          </div>
+        </a>
+      </article>
 
-<!-- Arduino Lie Detector -->
-<article class="card">
-  <a href="projects/arduino-lie-detector/">
-    <img src="assets/arduino-cover.jpg" alt="Arduino Lie Detector cover" />
-    <div class="label">
-      <span class="title">ARDUINO LIE DETECTOR</span>
-      <span class="meta">Interactive — Hardware</span>
-    </div>
-  </a>
-</article>
+      <!-- Arduino Lie Detector -->
+      <article class="card">
+        <a href="projects/arduino-lie-detector/">
+          <img src="assets/arduino-cover.jpg" alt="Arduino Lie Detector cover" />
+          <div class="label">
+            <span class="title">ARDUINO LIE DETECTOR</span>
+            <span class="meta">Interactive — Hardware</span>
+          </div>
+        </a>
+      </article>
 
-<!-- Nested Realities -->
-<article class="card">
-  <a href="projects/nested-realities/">
-    <img src="assets/nested-realities-cover.jpg" alt="Nested Realities cover" />
-    <div class="label">
-      <span class="title">NESTED REALITIES</span>
-      <span class="meta">Digital Art — Blender + Photography</span>
-    </div>
-  </a>
-</article>
+      <!-- Nested Realities -->
+      <article class="card">
+        <a href="projects/nested-realities/">
+          <img src="assets/nested-realities-cover.jpg" alt="Nested Realities cover" />
+          <div class="label">
+            <span class="title">NESTED REALITIES</span>
+            <span class="meta">Digital Art — Blender + Photography</span>
+          </div>
+        </a>
+      </article>
 
-<!-- Strataforms -->
-<article class="card">
-  <a href="projects/strataforms/">
-    <img src="assets/strataforms-cover.jpg" alt="Strataforms cover" />
-    <div class="label">
-      <span class="title">STRATAFORMS</span>
-      <span class="meta">Digital Art — Blender</span>
-    </div>
-  </a>
-</article>
+      <!-- Strataforms -->
+      <article class="card">
+        <a href="projects/strataforms/">
+          <img src="assets/strataforms-cover.jpg" alt="Strataforms cover" />
+          <div class="label">
+            <span class="title">STRATAFORMS</span>
+            <span class="meta">Digital Art — Blender</span>
+          </div>
+        </a>
+      </article>
 
-<!-- 40th Anniversary Logo -->
-<article class="card">
-  <a href="projects/40th-anniversary-logo/">
-    <img src="assets/40th-logo-cover.jpg" alt="40th Anniversary Logo" />
-    <div class="label">
-      <span class="title">40TH ANNIVERSARY LOGO</span>
-      <span class="meta">Graphic Design — Branding</span>
-    </div>
-  </a>
-</article>
+      <!-- 40th Anniversary Logo -->
+      <article class="card">
+        <a href="projects/40th-anniversary-logo/">
+          <img src="assets/40th-logo-cover.jpg" alt="40th Anniversary Logo" />
+          <div class="label">
+            <span class="title">40TH ANNIVERSARY LOGO</span>
+            <span class="meta">Graphic Design — Branding</span>
+          </div>
+        </a>
+      </article>
 
-<!-- Vascular Biosciences -->
-<article class="card">
-  <a href="projects/vascular-biosciences/">
-    <img src="assets/vbs-cover.jpg" alt="Vascular Biosciences project" />
-    <div class="label">
-      <span class="title">VASCULAR BIOSCIENCES</span>
-      <span class="meta">Graphic Design — Merch & Diagrams</span>
-    </div>
-  </a>
-</article>
-
+      <!-- Vascular Biosciences -->
+      <article class="card">
+        <a href="projects/vascular-biosciences/">
+          <img src="assets/vbs-cover.jpg" alt="Vascular Biosciences project" />
+          <div class="label">
+            <span class="title">VASCULAR BIOSCIENCES</span>
+            <span class="meta">Graphic Design — Merch & Diagrams</span>
+          </div>
+        </a>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    © <span id="2025"></span> Sophie Reavis
+    © <span id="year"></span> Sophie Reavis
   </footer>
 
-  <script>document.getElementById('2025').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
